@@ -4,10 +4,10 @@ on:
   push:
     branches: [ "master" ]
     paths:
-      - "./docker/Dockerfile"
-      - "./docker/*package?.txt"
-      - "./docker/requirement?.txt"
-      - "./docker/*entrypoint.sh" 
+      - "docker/Dockerfile"
+      - "docker/*package*"
+      - "docker/*requirement*"
+      - "docker/*entrypoint.sh" 
   workflow_dispatch:
 
 jobs:

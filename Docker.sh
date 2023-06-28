@@ -45,7 +45,7 @@ do
         IMG_TAG="$OPTARG"
         ;;
     v)
-        VOLUME="-v $OPTARG"
+        VOLUME="-v $OPTARG ${VOLUME}"
         ;;
     r)
         RM=""
