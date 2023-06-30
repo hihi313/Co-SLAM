@@ -2,7 +2,7 @@ name: auto docker build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
     paths:
       - "docker/Dockerfile"
       - "docker/*package*"

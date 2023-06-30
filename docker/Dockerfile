@@ -11,10 +11,14 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG APT_DPDS=apt_packages.txt
 ARG PY_DPDS=requirements.txt
 ARG PY_DPDS2=requirements2.txt
+ARG APT_SERVER=http:\/\/mirror01.idc.hinet.net
 
 WORKDIR /tmp
 
 USER root
+
+# Change faster apt server
+RUN sed -i 's/^\(\s*deb\s*\)\w*:\/\/[^\/]*/\1${APT_SERVER}/g' /etc/apt/sources.list
 
 # install apt dependencies
 RUN apt update
