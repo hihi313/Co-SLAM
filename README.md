@@ -42,6 +42,8 @@ cd Co-SLAM
 ```bash
 # Create conda environment
 conda create -n coslam python=3.7
+conda init bash
+bash
 conda activate coslam
 
 # Install the pytorch first (Please check the cuda version)

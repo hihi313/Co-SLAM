@@ -11,6 +11,20 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": false
+        },
+        {
+            "name": "Python: co-slam",
+            "type": "python",
+            "request": "launch",
+            "python": "/miniconda/envs/coslam/bin/python",
+            "program": "/app/coslam.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--config", "./configs/ScanNet/scene0169_00.yaml",
+                "--input_folder", "/datasets/VSLAM/ScanNet/scene0169_00",
+                "--output", "./output"
+            ]
         }
     ]
 }

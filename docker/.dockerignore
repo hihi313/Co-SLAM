@@ -1,5 +1,6 @@
 *
-**/docker/!apt_package*.txt
-**/docker/!requirement*.txt
-**/docker/!*entrypoint.sh
-**/external/NumpyMarchingCubes
+**/docker/*
+!**/docker/apt_package*.txt
+!**/docker/requirement*.txt
+!**/docker/*entrypoint.sh
+!**/external/NumpyMarchingCubes

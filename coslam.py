@@ -595,6 +595,7 @@ class CoSLAM():
         data_loader = DataLoader(self.dataset, num_workers=self.config['data']['num_workers'])
 
         # Start Co-SLAM!
+        assert len(data_loader) > 0, "len(data_loader) <= 0!"
         for i, batch in tqdm(enumerate(data_loader)):
             # Visualisation
             if self.config['mesh']['visualisation']:
@@ -673,6 +674,8 @@ if __name__ == '__main__':
     cfg = config.load_config(args.config)
     if args.output is not None:
         cfg['data']['output'] = args.output
+    if args.input_folder is not None:
+        cfg['data']['datadir'] = args.input_folder
 
     print("Saving config and script...")
     save_path = os.path.join(cfg["data"]["output"], cfg['data']['exp_name'])
