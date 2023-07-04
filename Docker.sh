@@ -77,6 +77,7 @@ do
                 --privileged \
                 --init \
                 --ipc=host \
+                --shm-size 20G \
                 --env="$DISPLAY_ENV" \
                 --mount type=volume,src="vscode-extensions",dst="/root/.vscode-server/extensions" \
                 --volume="$PWD:$WORKDIR" \
