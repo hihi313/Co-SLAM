@@ -1,4 +1,4 @@
-FROM nvidia/cudagl:11.3.1-runtime-ubuntu20.04 AS conda
+FROM nvidia/cudagl:11.3.1-devel-ubuntu20.04 AS conda
 
 ENV APT_SERVER=http:\/\/mirror01.idc.hinet.net
 ENV DOCKER_ROOT=./docker
