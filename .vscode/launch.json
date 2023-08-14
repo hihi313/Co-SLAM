@@ -13,7 +13,7 @@
             "justMyCode": false
         },
         {
-            "name": "Python: co-slam",
+            "name": "coslam",
             "type": "python",
             "request": "launch",
             "python": "/miniconda/envs/coslam/bin/python",
@@ -22,8 +22,23 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": [
-                "--config", "configs/Replica/office1.yaml",
-                "--input_folder", "/datasets/VSLAM/Replica/office1",
+                "--config", "configs/Replica/room2.yaml",
+                "--input_folder", "/datasets/VSLAM/Replica/room2",
+                // "--output", "./output"
+            ]
+        },
+        {
+            "name": "coslam mp",
+            "type": "python",
+            "request": "launch",
+            "python": "/miniconda/envs/coslam/bin/python",
+            // "python": "/home/user/miniconda/envs/coslam/bin/python",
+            "program": "/app/coslam_mp.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--config", "configs/Replica/office3.yaml",
+                "--input_folder", "/datasets/VSLAM/Replica/office3",
                 // "--output", "./output"
             ]
         }

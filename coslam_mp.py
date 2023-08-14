@@ -335,6 +335,8 @@ if __name__ == '__main__':
     cfg = config.load_config(args.config)
     if args.output is not None:
         cfg['data']['output'] = args.output
+    if args.input_folder is not None:
+        cfg['data']['datadir'] = args.input_folder
 
     print("Saving config and script...")
     save_path = os.path.join(cfg["data"]["output"], cfg['data']['exp_name'])
